@@ -72,7 +72,7 @@ header {
    ========================= */
 .hero {
     height: 300px;
-    background-image: url("images/Bunnies.jpg");
+    background-image: url("images/Bunnies.JPG");
     background-size: cover;
     background-position: center;
     display: flex;
