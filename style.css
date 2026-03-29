@@ -1,0 +1,302 @@
+/* =========================
+   BODY & GENERAL
+   ========================= */
+body {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 0;
+    color: #eee;
+    background-color: #1c1b22; /* deep gothic dark */
+    background-image: radial-gradient(rgba(255,255,255,0.02) 2px, transparent 2px);
+    background-size: 40px 40px;
+    transition: background 0.5s ease;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #f5f0e6;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    margin: 0 0 10px 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: rgba(28,27,34,0.95);
+    z-index: 999;
+    border-bottom: 1px solid #444;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.navbar .logo a {
+    color: #f5f0e6;
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f5f0e6;
+    text-shadow: 0 0 6px #f5f0e6;
+}
+
+/* =========================
+   HERO BANNER
+   ========================= */
+.hero {
+    height: 300px;
+    background-image: url("images/Bunnies.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    background: rgba(0,0,0,0.5);
+    padding: 20px 30px;
+    border-radius: 8px;
+    font-size: 2.2em;
+    letter-spacing: 3px;
+}
+
+/* Hero subtitle (character design note) */
+.hero-subtitle {
+    margin-top: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2em;
+    color: #f5f0e6;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+/* =========================
+   NAVIGATION
+   ========================= */
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: #1c1b22; /* fully opaque, no transparency */
+    z-index: 999;
+    border-bottom: 1px solid #444;
+}
+
+/* =========================
+   HERO DARKENING
+   ========================= */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5); /* subtle dark overlay */
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2; /* ensures text and button stay above overlay */
+}
+
+/* =========================
+   ABOUT SECTION
+   ========================= */
+.about-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;
+}
+
+/* =========================
+   ABOUT PHOTO
+   ========================= */
+.about-photo {
+    width: 220px;
+    height: 220px;           /* makes it a perfect circle container */
+    object-fit: cover;       /* keeps aspect ratio, crops if needed */
+    border-radius: 50%;
+    border: 3px solid #444;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.about-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(245,240,230,0.6);
+}
+
+.about-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(245,240,230,0.6);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    line-height: 1.7;
+    font-size: 1.05em;
+    color: #ddd;
+}
+
+/* =========================
+   SECTIONS & CARDS
+   ========================= */
+section {
+    background: rgba(28,27,34,0.95);
+    padding: 25px 30px;
+    margin: 30px auto;
+    border-radius: 12px;
+    border: 1px solid #444;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    max-width: 1200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+}
+
+/* =========================
+   GALLERY
+   ========================= */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery img {
+    width: 200px;          /* fixed width */
+    height: 200px;         /* box height */
+    border-radius: 8px;
+    cursor: pointer;
+    object-fit: cover;     /* keeps aspect ratio, crops excess */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.2) rotate(-2deg);
+    box-shadow: 0 15px 25px rgba(245,240,230,0.5);
+}
+
+.gallery img {
+    width: 200px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.2) rotate(-2deg);
+    box-shadow: 0 15px 25px rgba(245,240,230,0.5);
+}
+
+/* =========================
+   LIGHTBOX
+   ========================= */
+.lightbox {
+    display: none;
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(245,240,230,0.6);
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
+    color: #f5f0e6;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close:hover {
+    transform: scale(1.2);
+}
+
+/* =========================
+   LINKS
+   ========================= */
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #f5f0e6;
+    text-shadow: 0 0 6px #f5f0e6;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px 0;
+    color: #bbb;
+    border-top: 1px solid #444;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
